@@ -1,65 +1,125 @@
-//
-//  main.m
-//  AsyncCopy
-//
-//  Created by Alex Nichol on 10/27/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
-//
 
-#import <Foundation/Foundation.h>
-#import "AsyncCopier.h"
-
-#define kBarLength 30
-
-NSString * readLine (FILE * file);
-
-int main (int argc, const char * argv[]) {
-	@autoreleasepool {
-		NSString * source = nil;
-		NSString * destination = nil;
-		printf("Source: ");
-		source = readLine(stdin);
-		printf("Destination: ");
-		destination = readLine(stdin);
-		BOOL result = [AsyncCopier asyncCopySource:source destination:destination
-										  callback:^(AsyncCopier * copier, CopierCallbackType type, double progress) {
-			if (type == CopierCallbackTypeDone) {
-				printf("\nDone\n");
-				exit(0);
-			} else if (type == CopierCallbackTypeFailed) {
-				printf("\nError!\n");
-				exit(1);
-			} else {
-				int numStars = round(progress * kBarLength);
-				printf("|");
-				for (int i = 0; i < numStars; i++) {
-					printf("*");
-				}
-				for (int i = numStars; i < kBarLength; i++) {
-					printf("-");
-				}
-				printf("|  (");
-				printf("%d%%)  \r", (int)round(progress * 100));
-				fflush(stdout);
-			}
-		}];
-		if (!result) {
-			printf("Failed to begin\n");
-			return -1;
-		}
-		[[NSRunLoop currentRunLoop] run];
-	}
-	return 0;
 }
 
-NSString * readLine (FILE * file) {
-	NSMutableString * string = [[NSMutableString alloc] init];
-	int c;
-	while ((c = fgetc(file)) != EOF) {
-		if (c == '\n') break;
-		if (c != '\r') {
-			[string appendFormat:@"%c", (char)c];
-		}
-	}
-	return string;
+;gnirts nruter	
+
+}	
+
+}		
+
+;]c)rahc( ,"c%"@:tamroFdneppa gnirts[			
+
+{ )'r\' =! c( fi		
+
+;kaerb )'n\' == c( fi		
+
+{ )FOE =! ))elif(ctegf = c(( elihw	
+
+;c tni	
+
+;]tini ]colla gnirtSelbatuMSN[[ = gnirts * gnirtSelbatuMSN	
+
+{ )elif * ELIF( eniLdaer * gnirtSSN
+
+
 }
+
+;0 nruter	
+
+}	
+
+;]nur ]pooLnuRtnerruc pooLnuRSN[[		
+
+}		
+
+;1- nruter			
+
+;)"n\nigeb ot deliaF"(ftnirp			
+
+{ )tluser!( fi		
+
+;]}		
+
+}			
+
+;)tuodts(hsulff				
+
+;))001 * ssergorp(dnuor)tni( ,"r\  )%%d%"(ftnirp				
+
+;)"(  |"(ftnirp				
+
+}				
+
+;)"-"(ftnirp					
+
+{ )++i ;htgneLraBk < i ;sratSmun = i tni( rof				
+
+}				
+
+;)"*"(ftnirp					
+
+{ )++i ;sratSmun < i ;0 = i tni( rof				
+
+;)"|"(ftnirp				
+
+;)htgneLraBk * ssergorp(dnuor = sratSmun tni				
+
+{ esle }			
+
+;)1(tixe				
+
+;)"n\!rorrEn\"(ftnirp				
+
+{ )deliaFepyTkcabllaCreipoC == epyt( fi esle }			
+
+;)0(tixe				
+
+;)"n\enoDn\"(ftnirp				
+
+{ )enoDepyTkcabllaCreipoC == epyt( fi			
+
+{ )ssergorp elbuod ,epyt epyTkcabllaCreipoC ,reipoc * reipoCcnysA(^:kcabllac  										
+
+noitanitsed:noitanitsed ecruos:ecruoSypoCcnysa reipoCcnysA[ = tluser LOOB		
+
+;)nidts(eniLdaer = noitanitsed		
+
+;)" :noitanitseD"(ftnirp		
+
+;)nidts(eniLdaer = ecruos		
+
+;)" :ecruoS"(ftnirp		
+
+;lin = noitanitsed * gnirtSSN		
+
+;lin = ecruos * gnirtSSN		
+
+{ loopesaelerotua@	
+
+{ )][vgra * rahc tsnoc ,cgra tni( niam tni
+
+
+;)elif * ELIF( eniLdaer * gnirtSSN
+
+
+03 htgneLraBk enifed#
+
+
+"h.reipoCcnysA" tropmi#
+
+>h.noitadnuoF/noitadnuoF< tropmi#
+
+
+//
+
+.devreser sthgir llA .__emaNynapmoCyM__ 1102 )c( thgirypoC  //
+
+.11/72/01 no lohciN xelA yb detaerC  //
+
+//
+
+ypoCcnysA  //
+
+m.niam  //
+
+//
